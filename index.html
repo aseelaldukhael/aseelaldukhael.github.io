@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aseel Aldukhael | Data &amp; Analytics Engineer</title>
 <meta name="description" content="Portfolio of Aseel Aldukhael, Data &amp; Analytics Engineer in Riyadh. Data pipelines, dashboards and clear insights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0d1117; --surface:#151b24; --line:#232c39; --text:#e8ecf2; --muted:#8d99ab;
@@ -120,6 +122,15 @@
     nav ul{gap:18px}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+  /* Language switch */
+  #langbtn{font:inherit;font-weight:600;font-size:.88rem;color:var(--text);background:transparent;border:1px solid #3a4658;border-radius:999px;padding:5px 14px;cursor:pointer}
+  #langbtn:hover{border-color:var(--accent)}
+  html[lang="ar"] body{font-family:"Cairo","Segoe UI",Tahoma,sans-serif}
+  html[lang="ar"] *{letter-spacing:0!important}
+  html[dir="rtl"] .edu li{border-left:0;padding-left:0;border-right:2px solid var(--accent);padding-right:16px}
+  html[dir="rtl"] .contact{text-align:right}
+  html[dir="rtl"] .hero p{max-width:40ch}
 </style>
 </head>
 <body>
@@ -131,6 +142,7 @@
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><button type="button" id="langbtn" aria-label="التبديل إلى العربية">عربي</button></li>
     </ul>
   </div>
 </nav>
@@ -162,8 +174,8 @@
         <article class="project wide">
           <div>
             <h3>Riyadh Coffee Map</h3>
-            <p>A data pipeline and interactive Arabic dashboard that answers one question: which Riyadh districts have the most cafes, and which are less crowded? It merges OpenStreetMap and Overture Maps, cleans and de-duplicates the places, assigns each cafe to a district, and checks the result with automatic quality tests. Try it below: zoom, search for a cafe, or click a district.</p>
-            <ul class="tags"><li>Python</li><li>OpenStreetMap</li><li>Overture Maps</li><li>Medallion (Bronze / Silver / Gold)</li><li>Data Quality Tests</li><li>GitHub Pages</li></ul>
+            <p>A data pipeline, run end to end on Databricks, and an interactive bilingual dashboard that answers one question: which Riyadh districts have the most cafes, and which are less crowded? It merges OpenStreetMap and Overture Maps, cleans and de-duplicates the places, assigns each cafe to a district, and checks the result with automatic quality tests. Try it below: zoom, search for a cafe, or click a district.</p>
+            <ul class="tags"><li>Python</li><li>Databricks</li><li>OpenStreetMap</li><li>Overture Maps</li><li>Medallion (Bronze / Silver / Gold)</li><li>Data Quality Tests</li><li>GitHub Pages</li></ul>
             <ul class="stats"><li><b>3,270</b> cafes</li><li><b>143</b> districts</li><li><b>13</b> quality tests</li></ul>
             <div class="cta" style="animation:none;margin-top:22px">
               <a class="btn" href="https://aseelaldukhael.github.io/riyadh-coffee-map/" target="_blank" rel="noopener noreferrer">Open the live map</a>
@@ -201,6 +213,22 @@
       </div>
 
       <div class="panel" id="panel-da" role="tabpanel" aria-labelledby="tab-da">
+        <article class="project">
+          <div>
+            <h3>Cafe Competition Explorer</h3>
+            <p>An interactive tool built on the Riyadh Coffee Map data. See the most and least competitive districts at a glance, click any district for its chain share and top brands, and filter by district size.</p>
+            <ul class="tags"><li>Python</li><li>pandas</li><li>Interactive Analysis</li><li>Data Storytelling</li></ul>
+            <ul class="stats"><li><b>143</b> districts</li><li><b>3 levels</b> of competition</li><li><b>Live</b> filters and rankings</li></ul>
+            <a class="btn" href="https://aseelaldukhael.github.io/riyadh-coffee-map/analysis.html" target="_blank" rel="noopener noreferrer">Try the explorer</a>
+          </div>
+          <div class="frame">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <div class="shots">
+              <div class="shot">Cafe Competition Explorer<img alt="Interactive chart of Riyadh districts by cafe competition and chain share, with a detail panel for Al Olaya" src="data:image/webp;base64,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"></div>
+            </div>
+          </div>
+        </article>
+
         <article class="project">
           <div>
             <h3>TechCatalog Dashboard</h3>
@@ -302,8 +330,8 @@
       f.title='Riyadh Coffee Map, interactive demo';
       f.setAttribute('allow','fullscreen');
       var note=document.createElement('p');
-      note.style.cssText='padding:10px 14px;font-size:.85rem;color:var(--muted);background:#0a0e14';
-      note.innerHTML='Map not showing? <a href="https://aseelaldukhael.github.io/riyadh-coffee-map/" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">Open it in a new tab</a>.';
+      note.id='cmNote';note.style.cssText='padding:10px 14px;font-size:.85rem;color:var(--muted);background:#0a0e14';
+      note.innerHTML=window.__noteHtml?window.__noteHtml():'Map not showing?';
       c.replaceWith(f);
       f.parentNode.appendChild(note);
     }
@@ -358,6 +386,76 @@
     window.addEventListener('resize',size);
     size();
     if(!reduce)requestAnimationFrame(loop);
+  })();
+
+  // Language switch (English / Arabic)
+  (function(){
+    var AR={
+      'Work':'الأعمال','About':'نبذة','Contact':'تواصل',
+      'Are you ready?':'هل أنت مستعد؟',
+      'Turning complex data into clean architectures and clear insights.':'أحوّل البيانات المعقدة إلى بنى منظمة ورؤى واضحة.',
+      'View my work':'استعرض أعمالي','Get in touch':'تواصل معي',
+      "Aseel's Work":'الأعمال',
+      'Pipelines that move data reliably, and dashboards that make it easy to understand.':'خطوط بيانات تنقل البيانات بموثوقية، ولوحات تجعل فهمها سهلاً.',
+      'Data Engineering':'هندسة البيانات','Data Analysis':'تحليل البيانات',
+      'Riyadh Coffee Map':'خريطة المقاهي في الرياض',
+      'A data pipeline, run end to end on Databricks, and an interactive bilingual dashboard that answers one question: which Riyadh districts have the most cafes, and which are less crowded? It merges OpenStreetMap and Overture Maps, cleans and de-duplicates the places, assigns each cafe to a district, and checks the result with automatic quality tests. Try it below: zoom, search for a cafe, or click a district.':'خط بيانات يعمل بالكامل على Databricks ولوحة تفاعلية بالعربية والإنجليزية تجيب عن سؤال واحد: أي أحياء الرياض فيها أكثر عدد من المقاهي، وأيها أقل ازدحاماً؟ يدمج المشروع OpenStreetMap وOverture Maps، وينظّف الأماكن ويزيل المكرر منها، ويربط كل مقهى بحيّه، ثم يتحقق من النتيجة باختبارات جودة آلية. جرّب بالأسفل: كبّر الخريطة، ابحث عن مقهى، أو اضغط على حي.',
+      'cafes':'مقهى','districts':'حي','quality tests':'اختبار جودة',
+      'Open the live map':'افتح الخريطة الحية','View on GitHub':'عرض على GitHub',
+      'Interactive demo':'عرض تفاعلي','Click to try it':'اضغط للتجربة',
+      'خريطة المقاهي في الرياض':'Riyadh Coffee Map',
+      'An Azure-native data platform that collects device prices from Google Shopping and Amazon, then cleans and models them so Saudi and foreign market prices can be compared. I built the final transformation and testing step.':'منصة بيانات مبنية على Azure تجمع أسعار الأجهزة من Google Shopping وAmazon، ثم تنظّفها وتنمذجها لمقارنة الأسعار بين السوق السعودي والأسواق الأجنبية. أنجزتُ مرحلة التحويل النهائي والاختبار.',
+      'Daily':'يومياً','automated run, 10:00 AM Riyadh':'تشغيل آلي، 10:00 صباحاً بتوقيت الرياض','4 layers':'4 طبقات','Star schema':'مخطط نجمي','for reporting':'للتقارير',
+      'Cafe Competition Explorer':'مستكشف منافسة المقاهي',
+      'An interactive tool built on the Riyadh Coffee Map data. See the most and least competitive districts at a glance, click any district for its chain share and top brands, and filter by district size.':'أداة تفاعلية مبنية على بيانات خريطة مقاهي الرياض. اعرف الأحياء الأعلى والأقل منافسة بنظرة واحدة، واضغط على أي حي لترى نسبة السلاسل وأبرز العلامات، وصفِّ حسب حجم الحي.',
+      'Try the explorer':'جرّب المستكشف','3 levels':'3 مستويات','of competition':'من المنافسة','Live':'مباشرة','filters and rankings':'فلاتر وترتيب',
+      'A Power BI dashboard that compares device prices between Saudi Arabia and the US, by category and brand, and checks how price relates to rating.':'لوحة Power BI تقارن أسعار الأجهزة بين السعودية وأمريكا حسب الفئة والعلامة، وتفحص علاقة السعر بالتقييم.',
+      'products':'منتج','markets':'أسواق','categories':'فئات',
+      'A Power BI dashboard on Olist e-commerce data. It shows revenue by payment type and by state, installment patterns, and the sales trend over time.':'لوحة Power BI على بيانات Olist للتجارة الإلكترونية. تعرض الإيرادات حسب نوع الدفع وحسب الولاية، وأنماط التقسيط، واتجاه المبيعات عبر الزمن.',
+      'total revenue':'إجمالي الإيرادات','orders analyzed':'طلب محلَّل',
+      'About me':'نبذة عني',
+      "I'm a Data & Analytics Engineer based in Riyadh. I build data pipelines and dashboards that turn messy data into something people can trust and use.":'أعمل في هندسة وتحليل البيانات من الرياض. أبني خطوط بيانات ولوحات تحوّل البيانات الفوضوية إلى شيء يمكن الوثوق به واستخدامه.',
+      'I enjoy the full path: moving the data, cleaning it, testing it, and showing it clearly.':'أستمتع بالمسار كاملاً: نقل البيانات، وتنظيفها، واختبارها، وعرضها بوضوح.',
+      'Data Engineering Bootcamp':'معسكر هندسة البيانات','Saudi Digital Academy (SDA), Riyadh':'الأكاديمية السعودية الرقمية (SDA)، الرياض',
+      'B.Sc. in Computer Science':'بكالوريوس علوم الحاسب','Arab Open University (AOU), Riyadh':'الجامعة العربية المفتوحة (AOU)، الرياض',
+      'Diploma in Business Administration':'دبلوم إدارة الأعمال','Imam Mohammad Ibn Saud Islamic University (IMSIU), Riyadh':'جامعة الإمام محمد بن سعود الإسلامية (IMSIU)، الرياض',
+      "Let's work together.":'لنعمل معاً.',
+      "Looking for a data engineer or analyst? I'd love to hear from you.":'تبحث عن مهندس أو محلل بيانات؟ يسعدني التواصل معك.',
+      'Message me on LinkedIn':'راسلني على LinkedIn','See my GitHub':'شاهد حسابي على GitHub','Close':'إغلاق',
+      'Aseel Aldukhael. Riyadh, Saudi Arabia.':'Aseel Aldukhael. الرياض، المملكة العربية السعودية.'
+    };
+    var orig=new Map(),lang='en';
+    var norm=function(t){return t.replace(/\s+/g,' ').trim()};
+    function nodes(){
+      var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+        var p=n.parentNode.nodeName;return (p==='SCRIPT'||p==='STYLE')||!norm(n.nodeValue)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}});
+      var a=[],n;while(n=w.nextNode())a.push(n);return a;
+    }
+    function apply(l){
+      lang=l;
+      nodes().forEach(function(n){
+        if(!orig.has(n))orig.set(n,n.nodeValue);
+        var o=orig.get(n),k=norm(o);
+        if(l==='ar'&&AR[k]!==undefined){n.nodeValue=o.replace(k,AR[k])}
+        else if(l==='en'){n.nodeValue=o}
+      });
+      document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
+      var b=document.getElementById('langbtn');if(b){b.textContent=l==='ar'?'English':'عربي';b.setAttribute('aria-label',l==='ar'?'Switch to English':'التبديل إلى العربية')}
+      var ex=document.querySelector('a[href*="analysis.html"]');
+      if(ex){var u=ex.getAttribute('href').split('?')[0];ex.setAttribute('href',l==='ar'?u+'?lang=ar':u)}
+      var note=document.getElementById('cmNote');if(note)note.innerHTML=noteHtml();
+      try{localStorage.setItem('lang',l)}catch(e){}
+    }
+    window.__noteHtml=function(){return noteHtml()};
+    function noteHtml(){
+      return lang==='ar'
+        ?'لا تظهر الخريطة؟ <a href="https://aseelaldukhael.github.io/riyadh-coffee-map/" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">افتحها في تبويب جديد</a>.'
+        :'Map not showing? <a href="https://aseelaldukhael.github.io/riyadh-coffee-map/" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">Open it in a new tab</a>.';
+    }
+    document.getElementById('langbtn').addEventListener('click',function(){apply(lang==='en'?'ar':'en')});
+    var start='en';
+    try{var q=new URLSearchParams(location.search).get('lang');start=(q==='ar'||q==='en')?q:(localStorage.getItem('lang')||'en')}catch(e){}
+    if(start==='ar')apply('ar');
   })();
 </script>
 </body>
